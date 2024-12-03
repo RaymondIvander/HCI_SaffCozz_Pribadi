@@ -44,3 +44,186 @@ header{
 .menuNavigation a:hover{
     color: #DFA04F;
 }
+
+.container{
+    padding-top: 150px;
+    display: flex;
+    width: 100%;
+    height: 600px;
+    /* background-color: red; */
+    justify-content: center;
+}
+
+.wrapper{
+    max-width: 1100px;
+    width: 100%;
+    /* background-color: blueviolet; */
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0px 4px 4px rgb(0, 0, 0, 25%);
+    padding: 30px 50px;
+    position: relative;
+    justify-content: center;
+}
+
+.container .wrapper .topheader{
+    background-color: #4D2923;
+    width: 100%;
+    height: 6.67px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 4px 4px rgb(0, 0, 0, 25%);
+}
+
+.wrapper .text-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 70px;
+    position: relative;
+    margin-top: 30px;
+}
+
+.righttext h1 {
+    font-size: 24px;
+}
+
+.righttext p{
+    font-size: 16px;
+}
+
+.text-wrapper .righttext{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    /* background-color: blue; */
+}
+
+.text-wrapper .bar{
+    width: 1px;
+    background-color: #CECECE;
+}
+
+.text-wrapper .lefttext{
+    width: 600px;
+    /* background-color: red; */
+}
+
+.text-wrapper .lefttext h3{
+    margin-left: 20px ;
+    font-size: 16px;
+    font-family: Mulish;
+    margin-bottom: 0;
+}
+
+.text-wrapper .lefttext input{
+    display: flex;
+    width: 100%;
+    height: 39px;
+    border-radius: 10px;
+    border-color: 1px solid #BEBEBE;
+    margin-top: 7px;
+}
+
+.lefttext input::placeholder{
+    justify-content: center;
+    padding-left: 10px;
+    font-family: Mulish;
+}
+
+.lefttext input:focus{
+    border: 2px solid #4D2923;
+    outline: none;
+}
+
+.ButtonGender{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 200px;
+}
+
+.gender{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.but{
+    height: 15px;
+    border-radius: 100%;
+    border-color: #BEBEBE;
+}
+
+.ButtonGender p{
+    font-size: 13px;
+    margin-left: 10px;
+}
+
+.checklistcontainer{
+    display: flex ;
+    flex-direction: column;
+    /* background-color: black; */
+}
+
+.checker{
+    margin-left: 120px;
+    display: flex;
+    flex-direction: row;
+    /* background-color: blue; */
+}
+
+.checklistcontainer .checker input{
+    width: 15px;
+}
+
+.checker p{
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    margin-left: 10px;
+}
+
+.submitbtn{
+    /* background-color: purple; */
+    display: flex;
+    justify-content: center;
+}
+
+.sub{
+    font-family: mulish;
+    font-weight: bold;
+    font-size: 16px;
+    width: 100%;
+    height: 50px;
+    border-radius: 15px;
+    color: white;
+    background-color: #4D2923;
+}
+
+.sub:hover{
+    background-color: white;
+    border-color: 1px solid #4D2923;
+    color: #4D2923;
+}
+
+footer{
+    width: 100%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer h1{
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+footer div{
+    font-size: 20px;
+}

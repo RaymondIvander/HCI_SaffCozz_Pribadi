@@ -10,7 +10,7 @@ body{
 }
 
 header{
-    display: flex;
+    display: none;
     align-items: center;
     position: fixed;
     justify-content: space-between;
@@ -46,6 +46,7 @@ header{
 }
 
 .Banner1{
+    display: none;
     height: 623px;
 }
 
@@ -54,4 +55,47 @@ header{
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    background-color: red;
+    padding: 30px 30px;
+    
+}
+
+.Product-Menu{
+    max-width: 1420px;
+    display: flex;
+    background-color: yellow;
+    width: 100%;
+    justify-content: center;
+    padding: 30px 30px;
+}   
+
+.column-product{
+    display: flex;
+    flex-direction: column;
+    gap: 150px;
+}
+
+.row-product{
+    background-color: green;
+    display: flex;
+    flex-direction: row;
+    gap: 150px;
+}
+
+.product{
+    max-width: 325px;
+    background-color: blue
+}
+
+.border{ 
+    max-width: 325px;
+    max-height: 275px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }

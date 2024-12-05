@@ -49,14 +49,16 @@ header{
     padding-top: 150px;
     display: flex;
     width: 100%;
-    height: 600px;
+    max-width: 100%;
     /* background-color: red; */
     justify-content: center;
+    align-items: center;
 }
 
 .wrapper{
-    max-width: 1100px;
+    max-width: 1280px;
     width: 100%;
+    height: 630px;
     /* background-color: blueviolet; */
     display: flex;
     flex-direction: row;
@@ -80,9 +82,10 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 70px;
+    gap: 120px;
     position: relative;
     margin-top: 30px;
+    width: 100%;
 }
 
 .righttext h1 {
@@ -94,7 +97,8 @@ header{
 }
 
 .text-wrapper .righttext{
-    width: 300px;
+    max-width: 300px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     /* background-color: blue; */
@@ -106,65 +110,102 @@ header{
 }
 
 .text-wrapper .lefttext{
-    width: 600px;
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    max-height: 500px;
+    padding-bottom: 10px;
+    flex-direction: column;
     /* background-color: red; */
 }
 
-.text-wrapper .lefttext h3{
-    margin-left: 20px ;
-    font-size: 16px;
-    font-family: Mulish;
-    margin-bottom: 0;
+.form-input{
+    display: flex;
+    flex-direction: column;
+    /* margin-bottom: 20px; */
 }
 
-.text-wrapper .lefttext input{
+.text-wrapper .lefttext .form-input label{
+    font-size: 16px;
+    font-family: Mulish;
+    /* margin-bottom: 5px; */
     display: flex;
+}
+
+.form-input #errorMessage,#errorMessage2,#errorMessage3,#errorMessage4{
+    margin: 7px;
+    font-size: 14px;
+    font-weight: bolder;
+    color: red;
+}
+
+.text-wrapper .lefttext .form-input input{
     width: 100%;
     height: 39px;
     border-radius: 10px;
     border-color: 1px solid #BEBEBE;
-    margin-top: 7px;
+    margin-top: 10px;
 }
 
-.lefttext input::placeholder{
+.lefttext .form-input input::placeholder{
     justify-content: center;
     padding-left: 10px;
     font-family: Mulish;
 }
 
-.lefttext input:focus{
+.lefttext .form-input input:focus{
     border: 2px solid #4D2923;
     outline: none;
 }
 
-.ButtonGender{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 200px;
-}
-
 .gender{
+    margin-top: 10px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    margin-bottom: 10px;
 }
 
-.but{
-    height: 15px;
-    border-radius: 100%;
+.gender input[type="radio"]{
+    appearance: none;
+    width: 20px;
+    height: 20px;
     border-color: #BEBEBE;
+    border: 2px solid #BEBEBE;
+    border-radius: 50% ;
+    position: relative;
+    cursor: pointer;
 }
 
-.ButtonGender p{
+.gender input[type="radio"]:checked{
+    border-color: #4D2923;
+}
+
+.gender input[type="radio"]:checked::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    left: 50%;
+    top: 90%;
+    width: 15px;
+    height: 15px;
+    background-color: #4D2923; 
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+}
+
+.gender label{
     font-size: 13px;
     margin-left: 10px;
+    margin-right: 109px;
 }
 
 .checklistcontainer{
     display: flex ;
+    margin-top: 20px;
+    gap: 10px;
     flex-direction: column;
     /* background-color: black; */
 }
@@ -176,10 +217,6 @@ header{
     /* background-color: blue; */
 }
 
-.checklistcontainer .checker input{
-    width: 15px;
-}
-
 .checker p{
     display: flex;
     align-items: center;
@@ -187,9 +224,37 @@ header{
     margin-left: 10px;
 }
 
+.checklistcontainer input[type="checkbox"]{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-color: #BEBEBE;
+    border: 2px solid #BEBEBE;
+    position: relative;
+    cursor: pointer;
+    margin-top: 12px;
+}
+
+.checklistcontainer input[type="checkbox"]:checked {
+    border-color: #4D2923; 
+    background-color: #4D2923; 
+}
+
+
+.checklistcontainer input[type="checkbox"]:checked::after {
+    content: '\2713'; 
+    color: white;
+    position: absolute;
+    font-size: 14px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .submitbtn{
     /* background-color: purple; */
     display: flex;
+    margin-top: 10px;
     justify-content: center;
 }
 

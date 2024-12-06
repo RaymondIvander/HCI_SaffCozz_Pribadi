@@ -1,83 +1,100 @@
-function form_submit(){
-    let name = document.getElementById('name').value
-    let email = document.getElementById('email').value
-    let phone = document.getElementById('phone').value
-    let gender = ''
-    let errorMessage = document.getElementById('errorMessage')
-    let errorMessage2 = document.getElementById('errorMessage2')
-    let errorMessage3 = document.getElementById('errorMessage3')
-    let errorMessage4 = document.getElementById('errorMessage4')
+function form_submit(event){
+    event.preventDefault()
 
-    isnamevalid(name)
-    isemailvalid(email)
-    isphonevalid(phone)
-}
+    let name = document.getElementById('name').value;
+    let email = document.getElementById('email').value;
+    let phone = document.getElementById('phone').value;
+    let selectedGender = document.querySelector('input[name="gender"]:checked');
+    let checkboxes = document.querySelectorAll('input[name="box"]:checked');
+    let errorMessage = document.getElementById('errorMessage');
+    let errorMessage2 = document.getElementById('errorMessage2');
+    let errorMessage3 = document.getElementById('errorMessage3');
+    let errorMessage4 = document.getElementById('errorMessage4');
+    let errorMessage5 = document.getElementById('errorMessage5');
 
-function isnamevalid(name){
+    let isvalid = true
+
     if(name === ''){
-        errorMessage.textContent = 'Nama tidak boleh kosong';
-        event.preventDefault()
-        return
+        errorMessage.textContent = 'Name cannot be empty';
+        isvalid = false
     }
-    if(name.length < 2 || name.length > 100){
-        errorMessage.textContent = 'Nama harus terdiri dari 2 hingga 100 huruf';
-        event.preventDefault()
-        return
+    else if(name.length < 2 || name.length > 100){
+        errorMessage.textContent = 'Name must be between 2 and 100 characters';
+        isvalid = false
     }
-    if(name.includes('  ')){
-        errorMessage.textContent = 'Nama tidak boleh mengandung spasi ganda';
-        event.preventDefault()
-        return
+    else if(name.includes('  ')){
+        errorMessage.textContent = 'Name cannot contain double spaces';
+        isvalid = false
     }
-    if(name.indexOf(' ') === -1) {
-        errorMessage.textContent = 'Nama lengkap harus terdiri dari minimal dua kata';
-        event.preventDefault();
-        return;
+    else if(name.indexOf(' ') === -1) {
+        errorMessage.textContent = 'Full name must contain at least two words';
+        isvalid = false
+    }
+    else {
+        errorMessage.textContent= ''
     }
     for(let i = 0; i < name.length; i++){
         let char =name[i]
         if(!(char >= 'A' && char <= 'Z') && !(char >= 'a' && char <= 'z') && char !== ' '){
-            errorMessage.textContent = 'Nama hanya boleh mengandung huruf dan spasi';
-            event.preventDefault()
-            return
+            errorMessage.textContent = 'Name can only contain letters and spaces';
+            isvalid = false
+        }
+        else {
+            errorMessage.textContent= ''
         }
     }
-    errorMessage.textContent= ''
-}
 
-function isemailvalid(email){
-    if(email === ''){
-        errorMessage2.textContent = 'Email tidak boleh kosong'
-        event.preventDefault()
-        return
+    if (email === '') {
+        errorMessage2.textContent = 'Email cannot be empty';
+        isvalid = false;
+    } 
+    else if (!email.includes('@')) {
+        errorMessage2.textContent = 'EEmail must contain the "@" character';
+        isvalid = false;
+    } 
+    else {
+        let parts = email.split('@');
+        if (parts[0].length === 0 || parts[1].length <= 4) {
+            errorMessage2.textContent = 'Invalid email format';
+            isvalid = false;
+        } else {
+            errorMessage2.textContent = ''; 
+        }
     }
-    if(!email.includes('@')) {
-        errorMessage2.textContent = 'Email '
-        event.preventDefault()
-        return
-    }
-    let check = email.split('@')
-    if(check[0].length == 0 | check[1].length <= 4){
-        errorMessage2.textContent = 'Email tidak boleh kosong'
-        event.preventDefault()
-        return
-    }
-    errorMessage2.textContent= ''
-}
-
-function isphonevalid(phone){
     if(phone === ''){
-        errorMessage3.textContent = 'Phone Number tidak boleh kosong'
-        event.preventDefault()
-        return
+        errorMessage3.textContent = 'Phone number cannot be empty'
+        isvalid = false;
     }
-    if(phone.length < 10 || phone.length > 12){
-        
+    else if(phone.length < 10 || phone.length > 12){
+        errorMessage3.textContent = 'Phone number must be between 10 and 12 digits'
+        isvalid = false;
     }
-    if(isNaN(phone)){
-        errorMessage3.textContent = 'Angka saja'
-        event.preventDefault()
-        return
+    else if(isNaN(phone)){
+        errorMessage3.textContent = 'Phone number must be between 10 and 12 digits'
+        isvalid = false;
     }
-    errorMessage3.textContent= ''
+    else {
+        errorMessage3.textContent= ''
+    }
+
+    if (!selectedGender) {
+        errorMessage4.textContent = 'Please select a gender';
+        isValid = false;
+    } 
+    else {
+        errorMessage4.textContent = '';
+    }
+
+    if (checkboxes.length !== 3) {
+        errorMessage5.textContent = 'Please select all boxes';
+        isvalid = false;
+    } 
+    else {
+        errorMessage5.textContent = ''; 
+    }
+
+    if (isvalid) {
+        alert('Form submitted successfully!');
+        document.getElementById('myForm').submit();
+    }
 }

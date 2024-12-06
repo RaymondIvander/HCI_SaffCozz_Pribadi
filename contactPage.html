@@ -33,38 +33,41 @@
                         <br>Phone Number : 0815-1231-3331</p>
                 </div>
                 <div class="bar"></div>
-                <div class="lefttext">
-                    <div class="form-input">
-                        <label for="name">Full Name</label>
-                        <input type="text" name="name" id="name" placeholder="Your Full Name">
-                        <p id="errorMessage"></p>
+                <form id="myForm" onsubmit="form_submit(event)">
+                    <div class="lefttext">
+                        <div class="form-input">
+                            <label for="name">Full Name</label>
+                            <input type="text" name="name" id="name" placeholder="Your Full Name">
+                            <p id="errorMessage"></p>
+                        </div>
+                        <div class="form-input">
+                            <label for="email">Email Address</label>
+                            <input type="email" name="email" id="email" placeholder="eg : luffy@gmail.com">
+                            <p id="errorMessage2"></p>
+                        </div>
+                        <div class="form-input">
+                            <label for="phone">Phone Number</label>
+                            <input type="text" name="phone" id="phone" placeholder="Your Phone Number">
+                            <p id="errorMessage3"></p>
+                        </div>
+                        <div class="gender">
+                            <input type="radio" name="gender" id="male">
+                            <label for="male">Male</label>
+                            <input type="radio" name="gender" id="female">
+                            <label for="female">Female</label>
+                            <p id="errorMessage4"></p>
+                        </div>
+                        <div class="checklistcontainer">
+                            <div class="checker"><input type="checkbox" class="check" name="box" value="News"><p>Receive latest news</p></div>
+                            <div class="checker"><input type="checkbox" class="check" name="box" value="Exclusive"><p>Exclusive Offers</p></div>
+                            <div class="checker"><input type="checkbox" class="check" name="box" value="NewProduct"><p>New Product Releases</p></div>
+                            <p id="errorMessage5"></p>
+                        </div>
+                        <div class="submitbtn">
+                            <button type="submit" class="sub">Send Message</button>
+                        </div>
                     </div>
-                    <div class="form-input">
-                        <label for="email">Email Address</label>
-                        <input type="email" name="email" id="email" placeholder="eg : luffy@gmail.com">
-                        <p id="errorMessage2"></p>
-                    </div>
-                    <div class="form-input">
-                        <label for="phone">Phone Number</label>
-                        <input type="text" name="phone" id="phone" placeholder="Your Phone Number">
-                        <p id="errorMessage3"></p>
-                    </div>
-                    <div class="gender">
-                        <input type="radio" name="gender" id="male">
-                        <label for="male">Male</label>
-                        <input type="radio" name="gender" id="female">
-                        <label for="female">Female</label>
-                        <p id="errorMessage4"></p>
-                    </div>
-                    <div class="checklistcontainer">
-                        <div class="checker"><input type="checkbox" class="check"><p>Receive latest news</p></div>
-                        <div class="checker"><input type="checkbox" class="check"><p>Exclusive Offers</p></div>
-                        <div class="checker"><input type="checkbox" class="check"><p>New Product Releases</p></div>
-                    </div>
-                    <div class="submitbtn">
-                        <button type="submit" class="sub" onclick="form_submit()">Send Message</button>
-                    </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>

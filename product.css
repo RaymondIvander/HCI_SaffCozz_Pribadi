@@ -238,3 +238,208 @@ footer h1{
 footer div{
     font-size: 20px;
 }
+
+@media screen and (max-width: 768px) {
+    body {
+        font-family: 'Montserrat';
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 15px 10px;
+        height: auto;
+        box-shadow: 0 2px 5px rgb(0, 0, 0, 30%);
+    }
+
+    .Banner1{
+        height: 450px;
+    }
+
+    .Banner1 img{
+        margin-top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .container {
+        max-width: 768px;
+        margin-top: 60px; 
+        width: 95%;
+        display: flex;
+        flex-direction: column; 
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Product-Menu {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .column-product {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .row-product {
+        display: flex;
+        flex-direction: column; 
+        gap: 20px;
+    }
+
+    .product {
+        max-width: 100%; 
+        height: auto; 
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 0 4px 4px rgb(0, 0, 0, 25%);
+    }
+
+    .border {
+        width: 100%;
+        height: 200px; 
+        overflow: hidden;
+    }
+
+    .border img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5px 5px 0px 0px;
+    }
+
+    .text-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .text-wrapper p {
+        font-size: 14px; 
+        margin: 5px;
+        font-weight: bold;
+    }
+
+    .textbawah {
+        display: flex;
+        flex-direction: column; 
+        gap: 10px;
+    }
+
+    .textbawah p {
+        font-size: 12px;
+        font-weight: lighter;
+        color: #8F8989;
+    }
+
+    .popup {
+        display: none;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 1000;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .popup-content {
+        position: relative;
+        background-color: white;
+        padding: 20px;
+        border-radius: 5px;
+        text-align: center;
+        max-width: 90%; 
+        width: 100%;
+    }
+
+    .topinfo {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .topinfo .borderimg {
+        display: flex;
+        justify-content: center;
+        max-width: 100%;
+    }
+
+    .borderimg img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        border-radius: 10px;
+    }
+
+    .topinfomore {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .topinfomore h2 {
+        font-size: 18px;
+    }
+
+    .topinfomore p {
+        margin: 0;
+        text-align: left;
+        font-size: 12px;
+    }
+
+    .bottominfo {
+        margin-top: 10px;
+        text-align: left;
+    }
+
+    .bottominfo p {
+        font-size: 14px;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        font-size: 30px;
+        font-weight: bold;
+        color: #aaa;
+        cursor: pointer;
+        background: none;
+        border: none;
+    }
+
+    .close-btn:hover {
+        color: black;
+    }
+
+    footer{
+        margin-top: 125px;
+        width: 100%;
+        height: 350px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    footer h1{
+        font-weight: bolder;
+        font-size: 30px;
+    }
+    
+    footer div{
+        font-size: 20px;
+    }
+}

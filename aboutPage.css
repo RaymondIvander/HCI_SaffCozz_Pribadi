@@ -130,3 +130,107 @@ footer h1{
 footer div{
     font-size: 20px;
 }
+
+@media screen and (max-width: 768px) {
+    body {
+        font-family: 'Montserrat';
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 15px 10px;
+        height: auto;
+        box-shadow: 0 2px 5px rgb(0, 0, 0, 30%);
+    }
+
+    .Banner1{
+        height: 450px;
+    }
+
+    .Banner1 img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .Border{
+        max-width: 768px;
+        width: 100%;
+        height: 250px;
+        /* background-color: red; */
+        display: flex;
+        justify-content: center;
+        margin-top: 100px;
+    }
+    
+    .Border .textwrapper{
+        max-width: 768px;
+        width: 80%;
+        /* background-color: yellow; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        justify-content: center;
+        gap: 50px;
+        box-shadow: 0px 4px 4px rgb(0, 0, 0, 25%);
+        padding: 10px 50px 10px;
+    }
+    
+    .Border .textwrapper .topheader{
+        background-color: #4D2923;
+        width: 100%;
+        height: 6.67px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        box-shadow: 0px 4px 4px rgb(0, 0, 0, 25%);
+    }
+    
+    .Border .textedit{
+        /* background-color: blue; */
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 20px 30px;
+        gap: 60px;
+    }
+    
+    .Border .textedit h1{
+        font-size: 18px;
+        width: 100%;
+        display: flex;
+        justify-content: center ;
+        align-items: center;
+        /* background-color: rebeccapurple; */
+    }
+    
+    .Border .textedit p{
+        font-family: Mulish;
+        font-size: 12px;
+        font-weight: lighter;
+        /* background-color: brown; */
+    }
+
+    footer{
+        margin-top: 125px;
+        width: 100%;
+        height: 350px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    footer h1{
+        font-weight: bolder;
+        font-size: 30px;
+    }
+    
+    footer div{
+        font-size: 20px;
+    }
+}
